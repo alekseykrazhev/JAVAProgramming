@@ -14,7 +14,6 @@ public class App {
     }
 
     public static void printArr(int[][] a) {
-
         for (int[] x : a) {
             for (int z : x) {
                 System.out.print(z + "  ");
@@ -68,7 +67,7 @@ public class App {
                 }
             }
         }
-        
+
         System.out.println("///////////////////////////////////");
         printArr(arr);
     }

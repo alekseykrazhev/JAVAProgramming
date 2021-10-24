@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class App {
     public static void Hundreds(char c) {
+        /*
+         * String[] mas = { "сто", };
+         */
         switch (c) {
             case '1':
                 System.out.print("сто ");
