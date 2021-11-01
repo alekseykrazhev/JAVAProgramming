@@ -1,1 +1,2 @@
-# progaLabs3sem
+# JAVAProgramming
+Programming | BSU | LABS
