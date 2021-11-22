@@ -10,10 +10,10 @@ import java.util.Arrays;
 public class Test {
     public static void main(String[] args) throws Exception {
         Ellipse[] ellipses = {
-                new Ellipse("x^2/7 + y^2/9 = 1"),
-                new Ellipse("x^2/6 + y^2/8 = 1"),
-                new Ellipse("x^2/8 + y^2/7 = 1"),
-                new Ellipse("x^2/9 + y^2/6 = 1"),
+                new Ellipse("x^2/7 + y^2/9 = 1, blue, blue"),
+                new Ellipse("x^2/6 + y^2/8 = 1, blue, blue"),
+                new Ellipse("x^2/8 + y^2/7 = 1, blue, blue"),
+                new Ellipse("x^2/9 + y^2/6 = 1, blue, blue"),
         };
         System.out.println("Iterable Ellipse properties");
         for(Object a : ellipses[0]){
@@ -21,10 +21,10 @@ public class Test {
         }
         System.out.println();
         Hyperbola[] hyperbolas = {
-                new Hyperbola("x^2/7 - y^2/9 = 1"),
-                new Hyperbola("x^2/6 - y^2/8 = 1"),
-                new Hyperbola("x^2/8 - y^2/7 = 1"),
-                new Hyperbola("x^2/9 - y^2/6 = 1"),
+                new Hyperbola("x^2/7 - y^2/9 = 1, blue, blue"),
+                new Hyperbola("x^2/6 - y^2/8 = 1, blue, blue"),
+                new Hyperbola("x^2/8 - y^2/7 = 1, blue, blue"),
+                new Hyperbola("x^2/9 - y^2/6 = 1, blue, blue"),
         };
         System.out.println("Iterable Hyperbola properties");
         for(Object a : hyperbolas[0]){
@@ -32,16 +32,16 @@ public class Test {
         }
         System.out.println();
         Hyperbola[] hyperbolas_A = {
-                new Hyperbola("x^2/6 - y^2/8 = 1"),
-                new Hyperbola("x^2/7 - y^2/9 = 1"),
-                new Hyperbola("x^2/8 - y^2/7 = 1"),
-                new Hyperbola("x^2/9 - y^2/6 = 1"),
+                new Hyperbola("x^2/6 - y^2/8 = 1, blue, blue"),
+                new Hyperbola("x^2/7 - y^2/9 = 1, blue, blue"),
+                new Hyperbola("x^2/8 - y^2/7 = 1, blue, blue"),
+                new Hyperbola("x^2/9 - y^2/6 = 1, blue, blue"),
         };
         Ellipse[] ellipses_A = {
-                new Ellipse("x^2/6 + y^2/8 = 1"),
-                new Ellipse("x^2/7 + y^2/9 = 1"),
-                new Ellipse("x^2/8 + y^2/7 = 1"),
-                new Ellipse("x^2/9 + y^2/6 = 1"),
+                new Ellipse("x^2/6 + y^2/8 = 1, blue, blue"),
+                new Ellipse("x^2/7 + y^2/9 = 1, blue, blue"),
+                new Ellipse("x^2/8 + y^2/7 = 1, blue, blue"),
+                new Ellipse("x^2/9 + y^2/6 = 1, blue, blue"),
         };
         Arrays.stream(hyperbolas).forEach(o ->{
             try {

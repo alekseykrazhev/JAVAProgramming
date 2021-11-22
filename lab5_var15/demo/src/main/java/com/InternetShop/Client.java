@@ -7,12 +7,13 @@ import java.io.Serializable;
 
 public class Client implements Serializable{
     String name;
+    public String lan1, lan2;
     int money;
     boolean blackList;
     Order order;
     private Date date= new Date();
 
-    transient public ResourceBundle bundle=ResourceBundle.getBundle("MSG");
+    //transient public ResourceBundle bundle=ResourceBundle.getBundle("com.example.MSG", new Locale(lan1, lan2));
 
 
     public Client()
@@ -37,7 +38,7 @@ public class Client implements Serializable{
         return this.date;
     }
 
-    public void print()
+    public void print(ResourceBundle bundle)
     {
         System.out.println(bundle.getString("Name")+name);
         System.out.println(bundle.getString("Money")+money);

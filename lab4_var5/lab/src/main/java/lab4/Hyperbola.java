@@ -13,6 +13,9 @@ public class Hyperbola implements Function, Comparable<Hyperbola>, Iterator<Obje
     
     private int iterator_idx = 0;
 
+    public String center_color;
+    public String color;
+
     private void reset(){
         iterator_idx=0;
     }
@@ -42,6 +45,9 @@ public class Hyperbola implements Function, Comparable<Hyperbola>, Iterator<Obje
         else{
             System.out.println("Wrong parameter of b");
         }
+        String[] args = equation.split(",");
+        center_color = args[1];
+        color = args[2];
     }
 
     @Override

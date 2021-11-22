@@ -10,6 +10,9 @@ public class Ellipse implements Function,Comparable<Ellipse>, Iterator<Object>,I
     private double solution_1 = 0;
     private double solution_2 = 0;
     private int iterator_idx = 0;
+    public String center_color;
+    public String color;
+
     private void reset(){
         iterator_idx=0;
     }
@@ -87,6 +90,9 @@ public class Ellipse implements Function,Comparable<Ellipse>, Iterator<Object>,I
 
             System.out.println("Wrong parameter of b");
         }
+        String[] args = equation.split(",");
+        center_color = args[1];
+        color = args[2];
     }
     @Override
     public void solve(int x) throws Exception {

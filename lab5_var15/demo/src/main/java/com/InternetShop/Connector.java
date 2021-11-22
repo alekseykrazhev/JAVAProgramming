@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Connector
 {
-    private ArrayList<Client> masClients = new ArrayList<Client>();
+    private ArrayList<Client> masClients = new ArrayList<>();
 
     public Connector() {}
 

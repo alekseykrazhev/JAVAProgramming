@@ -25,11 +25,6 @@ public class App
         Scanner in = new Scanner(System.in);
         try
         {
-            if (args.length != 2)
-            {
-                in.close();
-                throw new Exception("Invalid number of arguments");
-            }
             System.out.println("Choose mode: 1 - print to file; 2 - read from file");
             int mode = in.nextInt();
             switch (mode)
