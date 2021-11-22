@@ -105,5 +105,9 @@ public class Test {
         Arrays.sort(ellipses_A,new SortByS2<Ellipse>());
         System.out.println("Comparing sorted array by solution_2 and initialized array,sorted by solution_2(Ellipse)");
         System.out.println("Result: " + (Arrays.compare(ellipses,ellipses_A)==0));
+        Ellipse a = new Ellipse(ellipses_A[0].toString());
+        System.out.println(a.toString());
+        Hyperbola b = new Hyperbola(hyperbolas_A[0].toString());
+        System.out.println(b.toString());
     }
 }
