@@ -9,19 +9,19 @@ int asmm(int N) {
 		mov ebx, ten
 		xor ecx, ecx
 		_loop_1 :
-		xor edx, edx
+			xor edx, edx
 			div ebx
-			cmp eax, 0
-			je _Mark_1
+			cmp eax, 0 ; compare to 0
+			je _Mark_1 ; flag
 			add ecx, 2
 			loop _loop_1
-			_Mark_1 :
-		mov eax, N
+		_Mark_1 :
+			mov eax, N
 			xor ebx, ebx
 			add ebx, 1
 			add ecx, 2
-			_loop_2 :
-			imul ebx, 10
+		_loop_2 :
+			imul ebx, 10 ; am of el in str * el size
 			loop _loop_2
 			imul eax, 10
 			add eax, ebx
@@ -33,9 +33,9 @@ int asmm(int N) {
 
 int main()
 {
-    std::cout << "Enter a number:\n";
+	std::cout << "Enter a number:\n";
 	int N;
-    std::cin >> N;
-	
-    std::cout << asmm(N);
+	std::cin >> N;
+
+	std::cout << asmm(N);
 }
