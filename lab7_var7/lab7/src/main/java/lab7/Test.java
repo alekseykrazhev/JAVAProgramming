@@ -45,7 +45,7 @@ public class Test {
             //Smaller than 7
             billMap.showObjectSmallerThanKey(7);
 
-            System.out.println("\n\nThe programme worked correctly!");
+            System.out.println("\n\t Program worked correctly!");
         } catch (Exception e) {
             System.err.println(e);
             System.exit(1);

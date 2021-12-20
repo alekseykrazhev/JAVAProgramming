@@ -66,7 +66,7 @@ int removeSpaceCStyle(char* str) {
 }
 
 int main() {
-    const char* inputStr = "sdfsf df sfd dsfs f  sdfs sdf      sdfsdf";
+    const char* inputStr = "sdfsf df sfd dsfs f  sdfs sdf      sdfsdf lhj jkn";
     unsigned int len = strlen(inputStr) + 1;
 
     char* asmStr = new char[len];
@@ -85,7 +85,5 @@ int main() {
 
     std::cout << "C++:";
     std::cout << removeSpaceCStyle(CpStr) << std::endl;
-
-    system("pause");
     return 0;
 }

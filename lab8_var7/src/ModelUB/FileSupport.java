@@ -5,7 +5,6 @@ import java.io.*;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Vector;
 
 public class FileSupport {
     private String fileNameDat;
