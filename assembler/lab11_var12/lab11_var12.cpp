@@ -1,5 +1,4 @@
 ﻿#include <string.h>
-
 #include <cmath>
 #include <iostream>
 
@@ -8,32 +7,32 @@ double cosh_taylor(double x, int k) {
 	int t10 = 10;
 	_asm {
 
-		fld t10
-		fld1;
+		fld t10 ; загрузка вещественного числа
+		fld1 ; +1.0 в вещественный стек
 		mov eax, k
-			mov ebx, 0
-			while_take_e:
-		fdiv st, st(1)
+		mov ebx, 0
+		while_take_e:
+			fdiv st, st(1)
 			dec eax
 			cmp eax, ebx
 			jne while_take_e
 
-			start :
-		fstp st; очистка 10
+		start :
+			fstp st; очистка 10
 			; fld e; st(4) = e
 			fld x; st(3) = x
 			fld1; st(2) = sum
 			fldz; st(1) = знаменатель
 			fld1; st(0) = step
 			fld st; сдвигается нумерация
-			fabs
+			fabs ; модуль
 			jmp while_calculate
 
-			while_calculate :
-		fcomip st, st(5); нормализуется нумерация
-			jna finish
+		while_calculate :
+			fcomip st, st(5); нормализуется нумерация // сравнение
+			jna finish ; <=
 			fld1; сдвигается нумерация
-			faddp st(2), st; нормализуется нумерация
+			faddp st(2), st ; нормализуется нумерация // сложение
 			fdiv st, st(1)
 			fld1; сдвигается нумерация
 			faddp st(2), st; нормализуется нумерация
@@ -45,8 +44,8 @@ double cosh_taylor(double x, int k) {
 			fabs
 			jmp while_calculate
 
-			finish :
-		fstp st
+		finish :
+			fstp st
 			fstp st
 			fstp st(2)
 			fstp st

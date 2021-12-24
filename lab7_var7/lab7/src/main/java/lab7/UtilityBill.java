@@ -1,4 +1,5 @@
 package lab7;
+
 import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.text.ParseException;
@@ -7,9 +8,9 @@ import java.util.Date;
 import java.util.StringTokenizer;
 
 public class UtilityBill implements Serializable {
-    //Fields
+    // Fields
     private boolean isDeleted = false;
-    private static String fieldName = "homeNumber";
+    private static String fieldName = "flatNumber";
 
     private int homeNumber;
     private int flatNumber;
@@ -20,12 +21,12 @@ public class UtilityBill implements Serializable {
     private double finePercent;
     private int expirationDays;
 
-
-    //  Methods
+    // Methods
     public UtilityBill() {
     }
 
-    public UtilityBill(int homeNumber, int flatNumber, String address, String name, Date paymentDate, double paymentAmount, double finePercent, int expirationDays) {
+    public UtilityBill(int homeNumber, int flatNumber, String address, String name, Date paymentDate,
+            double paymentAmount, double finePercent, int expirationDays) {
         this.homeNumber = homeNumber;
         this.flatNumber = flatNumber;
         this.address = address;
@@ -70,7 +71,6 @@ public class UtilityBill implements Serializable {
     public static void setFieldName(String fieldName) {
         UtilityBill.fieldName = fieldName;
     }
-
 
     public int getHomeNumber() {
         return homeNumber;

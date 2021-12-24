@@ -16,14 +16,14 @@ int removeSpaceASM(char* str) {
             je    emptyStringResult
             cmp   al, ' '
             jne   notSpace
-            jcxz  iterLoop
+            jcxz  iterLoop // cx == 0
             dec   ecx // --allowed
             stosb // es: [edi++] = al
             jmp   iterLoop
 
             notSpace :
         inc ecx // if 1 -> 2 (binary 10), 0 -> 1 (binary 01)
-            and ecx, 1 // 2 -> 0, 1 -> 1
+            and ecx, 1 // 2 -> 0, 1 -> 1 porazryadnoye ili
             add counter, ecx
             mov   ecx, 1
             stosb

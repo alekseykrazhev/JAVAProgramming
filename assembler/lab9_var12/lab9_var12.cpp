@@ -9,8 +9,8 @@ int asmm(int N) {
 		mov ebx, ten
 		xor ecx, ecx
 		_loop_1 :
-			xor edx, edx
-			div ebx
+		xor edx, edx
+			idiv ebx ; marked div
 			cmp eax, 0 ; compare to 0
 			je _Mark_1 ; flag
 			add ecx, 2
